@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.WebViewActivity">
+
+    <!--
+            android:weightSum="100"
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--
+        -->
+        <LinearLayout
+            android:id="@+id/ll_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_alignParentTop="true">
+
+            <!--
+                To remove the underline bar, include:
+                android:background="@android:color/transparent"
+            -->
+            <EditText
+                android:id="@+id/et_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".90"
+                android:textSize="12sp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"
+                android:layout_margin="1dp"
+                android:layout_toEndOf="@+id/et_url"
+                android:radius="30dip"
+                android:text="Go"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_rounded_corners_green"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <!--
+        app:layout_constraintTop_toBottomOf="@id/ll_url"
+        app:layout_constraintBottom_toBottomOf="parent"
+        -->
+        <LinearLayout
+            android:id="@+id/ll_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <!--
+            -->
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <requestFocus/>
+            </WebView>
+        </LinearLayout >
+
+        <!--
+            app:layout_constraintRight_toLeftOf="@+id/textView2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_webView"
+
+        -->
+
+
+
+
+    <!-- ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress" >
+    </ProgressBar-->
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyle" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

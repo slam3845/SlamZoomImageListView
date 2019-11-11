@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="ncLtGray1">#f5f5f5</color>
+    <color name="ncLtGray2">#f2f2f2</color>
+    <color name="ncLtGray3">#eeeeee</color>
+    <color name="ncLtGray4">#dddddd</color>
+    <color name="ncLtGray5">#888888</color>
+
+    <color name="ncLtBlue0">#effaff</color>
+    <color name="ncLtBlue1">#cceeff</color>
+    <color name="ncLtBlue2">#b3daff</color>
+</resources>
